@@ -14,7 +14,7 @@
 
 </head>
 <body>
-    <h1>
+    <h1 id="h1" onclick="changeH1()">
         Mobiles
     </h1>
     
@@ -100,7 +100,11 @@
     </footer>
 
     <script>
-
+        function changeH1() {
+            let change1 = window.document.getElementById('h1');
+            change1.innerText = "Mobile ME!"
+        }
+        console.log(changeH1())
     </script>
 </body>
 </html>
