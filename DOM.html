@@ -93,7 +93,7 @@
         </form>
 
         <br>
-        <p>
+        <p class="footerClass">
             Live avenue bakker street 244 - Lisbon Portugal - Mobiles lda
         </p>
         
@@ -105,6 +105,17 @@
             change1.innerText = "Mobile ME!"
         }
         console.log(changeH1())
+
+        function changeBackground(color) {
+            document.body.style.background = color;
+        }
+        console.log(changeBackground("lightBlue"))
+
+        function changeFooter() {
+            let footerChange = window.document.getElementsByClassName('footerClass')[0];
+            footerChange.innerText = 'fakeAdress.com';
+        }
+        console.log(changeFooter())
     </script>
 </body>
 </html>
