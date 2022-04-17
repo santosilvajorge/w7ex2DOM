@@ -61,7 +61,7 @@
             <td>€1185,92</td>
             <td>€299,99</td>
         </tr>
-        <tr>
+        <tr id="amazonLinks">
             <th>links</th>
             <td><a href="https://www.amazon.es/-/pt/dp/B09Q3QPQFC/ref=sr_1_1?crid=2LH5S9A6I9K6&keywords=samsung+galaxy+s22+ultra+smartphone&qid=1650063097&sprefix=smartphone+samsung+galaxy+s22+ultra%2Caps%2C71&sr=8-1">click to buy</a>
             <td><a href="https://www.amazon.es/-/pt/dp/B09Q3QPQFC/ref=sr_1_1?crid=2LH5S9A6I9K6&keywords=samsung+galaxy+s22+ultra+smartphone&qid=1650063097&sprefix=smartphone+samsung+galaxy+s22+ultra%2Caps%2C71&sr=8-1">click to buy</a>
@@ -116,6 +116,11 @@
             footerChange.innerText = 'fakeAdress.com';
         }
         console.log(changeFooter())
+
+        function classAmazon(){
+            var element = window.document.getElementById('amazonLinks');
+            element.classList.add("amazonLinks");
+        }
     </script>
 </body>
 </html>
