@@ -59,11 +59,11 @@
         </tr>
         <tr>
             <th>price</th>
-            <td>€1379,00</td>
-            <td>€749,99</td>
-            <td>€764,80</td>
-            <td>€1185,92</td>
-            <td>€299,99</td>
+            <td class="price">€1379,00</td>
+            <td class="price">€749,99</td>
+            <td class="price">€764,80</td>
+            <td class="price">€1185,92</td>
+            <td class="price">€299,99</td>
         </tr>
         <tr>
             <th>links</th>
@@ -125,18 +125,42 @@
         console.log(changeFooter())
 
          /* exercise 10*/
-        const amazonClass = document.querySelector('.amazon');
-        amazonClass.addEventListener('click', () => {
-            button.classList.add('amazonClass');
-    })
-        
+        const addClassToA = function () {       
+        const amazonClass = document.querySelectorAll('a');
+        for (let i=0; i<addClassToA.lenght; i++) {
+            amazonClass[i].classList.add("newClass")
+            }
+        };
 
          /* exercise 11*/
+         const toggleImagesClass = function () {
+            let images = document.querySelectorAll("img")
+            for (let i = 0; i < images.length; i++) {
+            const singleImg = images[i];
+            singleImg.classList.toggle("hidden")
+            };
+         }
 
+         /* exercise 12*/
 
-          /* exercise 12*/
+         const getRandomColor = function () {
+      const red = Math.round(Math.random() * 255);
+      const green = Math.round(Math.random() * 255);
+      const blue = Math.round(Math.random() * 255);
 
+      return "rgb(" + red + ", " + green + ", " + blue + ")";
+    };
 
+    const setRandomColor = function () {
+      const randomColor = getRandomColor();
+      let prices = document.querySelectorAll(".price")
+      for (let i = 0; i < prices.length; i++) {
+        let singlePrince = prices[i]
+        singlePrince.style.color = randomColor
+      }
+    };
+
+  
     </script>
 </body>
 </html>
